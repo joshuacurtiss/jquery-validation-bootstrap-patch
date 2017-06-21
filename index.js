@@ -1,6 +1,6 @@
 /*
  *  Patch the jQuery Validation Plugin to be friendly with Bootstrap's form feedback
- *  By Josh Curtiss, 6/13/2016
+ *  By Josh Curtiss, last modified 6/21/2017
  *
  *  You have a couple options how to utilize this patch:
  *
@@ -15,25 +15,21 @@
 var jQueryValidationBootstrapOptions={
 	highlight: function(element) {
 		$(element)
-			.closest('.form-group')
+			.closest('.has-feedback')
 				.removeClass('has-success')
 				.addClass('has-error')
-				.end()
-			.closest('.input-group')
-				.find('.form-control-feedback')
-					.removeClass('glyphicon-ok')
-					.addClass('glyphicon-remove');
+			.find('.form-control-feedback')
+				.removeClass('glyphicon-ok')
+				.addClass('glyphicon-remove');
 	},
 	unhighlight: function(element) {
 		$(element)
-			.closest('.form-group')
+			.closest('.has-feedback')
 				.removeClass('has-error')
 				.addClass('has-success')
-				.end()
-			.closest('.input-group')
-				.find('.form-control-feedback')
-					.removeClass('glyphicon-remove')
-					.addClass('glyphicon-ok');
+			.find('.form-control-feedback')
+				.removeClass('glyphicon-remove')
+				.addClass('glyphicon-ok');
 	},
 	errorElement: 'span',
 	errorClass: 'help-block',

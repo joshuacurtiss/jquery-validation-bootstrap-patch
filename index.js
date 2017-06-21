@@ -1,6 +1,6 @@
 /*
  *  Patch the jQuery Validation Plugin to be friendly with Bootstrap's form feedback
- *  By Josh Curtiss, last modified 6/21/2017
+ *  By Josh Curtiss, v1.1 (6/21/2017)
  *
  *  You have a couple options how to utilize this patch:
  *

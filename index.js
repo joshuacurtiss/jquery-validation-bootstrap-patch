@@ -36,6 +36,8 @@ var jQueryValidationBootstrapOptions={
 	errorPlacement: function(error, element) {
 		if(element.parent('.input-group').length) {
 			error.insertAfter(element.parent());
+		} else if(element.closest('.has-feedback').length) {
+			error.appendTo(element.closest('.has-feedback'));
 		} else {
 			error.insertAfter(element);
 		}

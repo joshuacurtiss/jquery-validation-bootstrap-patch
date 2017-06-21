@@ -7,7 +7,8 @@ $(document).ready(function(){
             debug: true,
             rules: {
                 name: {required:true, minlength:3},
-                email: {required:true, email:true}
+                email: {required:true, email:true},
+                gender: {required:true}
             },
             invalidHandler: function(event,validator) {
                 $("#status").html("There are "+validator.numberOfInvalids()+" errors.");

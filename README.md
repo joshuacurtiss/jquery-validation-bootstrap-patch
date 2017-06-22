@@ -7,6 +7,9 @@ the [jQuery Validation Plugin](https://jqueryvalidation.org) to make it work
 well with [Bootstrap](http://getbootstrap.com)'s form HTML conventions and its
 validation states. 
 
+See a demo of the patch in action here:  
+<http://www.curtiss.me/jquery-validation-bootstrap-patch>
+
 ## Usage ##
 
 In its simplest form, just load the script and include this function call in 
